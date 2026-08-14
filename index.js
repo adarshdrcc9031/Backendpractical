@@ -14,6 +14,7 @@ app.post("/createUser", async (req, res) => {
         console.log(req.body, "req.body")
         let { name, email, mobile } = req.body
         let user = await User.create({ name, email, mobile })
+        console.log("hi")
         res.status(201).json({ message: "User have been created", data: user })
     } catch (error) {
         let time = new Date().toISOString()
