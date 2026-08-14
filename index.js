@@ -42,6 +42,12 @@ app.get("/healthcheck", (req, res) => {
     res.send(respnseObj)
 })
 
+app.get("/healthcheck2", (req, res) => {
+    let respnseObj = {
+        message: "Server is healthy"
+    }
+    res.send(respnseObj)
+})
 app.listen(3000, () => {
     console.log('server is running on port 3000')
 })
